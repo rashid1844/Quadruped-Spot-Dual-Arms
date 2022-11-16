@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://ros.org/wiki/xacro"
+       name="spot_arm_xacro" >
+
+<!-- 	<xacro:arg name="limited" default="true"/>
+ -->
+	
+
+	<!-- spot -->
+	<xacro:include filename="$(find spot_description)/urdf/spot.urdf" />
+	
+	<!-- spot arm left & right -->
+	<xacro:include filename="$(find spot_description)/urdf/spot_arm_left.xacro" />
+	<xacro:include filename="$(find spot_description)/urdf/spot_arm_right.xacro" />
+
+	<!--	
+	<xacro:robotiq_85_gripper prefix="" parent="tool0">
+		<origin xyz="0 0 0" rpy="0 0 0" />
+	</xacro:robotiq_85_gripper>
+	-->
+
+
+</robot>
